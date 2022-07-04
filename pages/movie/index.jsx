@@ -22,9 +22,9 @@ export async function getStaticProps() {
 
 export default function Movie({sortby}) {
   return (
-    <div>
+    <>
       <Layout title="Movie" name="DBAnime"></Layout>
       <CardMovie data={sortby}></CardMovie>
-    </div>
+    </>
   )
 }

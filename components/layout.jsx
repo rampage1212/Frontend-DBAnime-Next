@@ -43,10 +43,10 @@ export default function Layout(props) {
         </Head>
         <noscript dangerouslySetInnerHTML={{__html:`<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HX7DR9" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
         {/* <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HX7DR9" height="0" width="0" className="hide"></iframe> */}
-        <div className="mt-auto w-full h-full container">
+        <div className="w-full container">
             {props.children}
-        </div>
         <Navbar />
+        </div>
     </>
     )
 }

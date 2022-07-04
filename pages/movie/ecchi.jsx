@@ -1,9 +1,9 @@
-import Layout from '../components/layout'
-import CardHome from '../components/card/card-home'
+import Layout from '../../components/layout'
+import CardMovie from '../../components/card/card-movie'
 
 
 export async function getStaticProps() {
-    const res = await fetch(process.env.NEXT_PUBLIC_ENV_HOME);
+    const res = await fetch(process.env.NEXT_PUBLIC_ENV_ECCHI_MOVIE);
     const data = await res.json();
     if (!data) {
       return {
@@ -20,11 +20,11 @@ export async function getStaticProps() {
     }
 }
 
-export default function Home({sortby}) {
+export default function EchiMovie({sortby}) {
   return (
-    <div>
-      <Layout title="Home" name="DBAnime"></Layout>
-      <CardHome data={sortby}></CardHome>
-    </div>
+    <>
+      <Layout title="Ecchi Movie" name="DBAnime"></Layout>
+      <CardMovie data={sortby}></CardMovie>
+    </>
   )
 }

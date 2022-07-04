@@ -36,34 +36,33 @@ export default function Search(){
     return (
         <>
         <Layout title="Search" name="DBAnime"></Layout>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <h1 className="text-center text-xl">As you wish</h1>
-        <h1 className="text-center text-sm">*(pencet silang biar result search nya ilang)</h1>
-        <center>
-        <form className="w-full h-full static">
-            <div className="mb-6">
-                <div className="">
-                    <input className="bg-gray-200 text-center appearance-none border-2 border-gray-200 rounded w-full py-2 px-20 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="" type="search" placeholder="search anime" onChange={onChange} onFocus={onFocus} value={query} />
-                    {active && result ? result.length>0 && (
-                    <ul className="mt-5">
-                        {result.map(({mal_id, title, url})=> (
-                            <li key={mal_id}>
-                                <Link href={url}>
-                                    <a>{title}</a>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                ):""}
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h1 className="text-center text-xl">As you wish</h1>
+            <h1 className="text-center text-sm">*(pencet silang biar result search nya ilang)</h1>
+            <center>
+                <div className="w-full h-full static">
+                    <div className="mb-6">
+                        <div className="">
+                            <input className="bg-gray-200 text-center appearance-none border-2 border-gray-200 rounded w-full py-2 px-20 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="" type="search" placeholder="search anime" onChange={onChange} onFocus={onFocus} value={query} />
+                            {active && result ? result.length>0 && (
+                            <ul className="mt-5">
+                                {result.map(({mal_id, title, url})=> (
+                                    <li key={mal_id}>
+                                        <Link href={url}>
+                                            <a>{title}</a>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        ):""}
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </form>
-        </center>
-
+            </center>
         </>
     )
 }

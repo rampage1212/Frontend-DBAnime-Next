@@ -3,7 +3,7 @@ import CardHome from '../components/card/card-home'
 
 
 export async function getStaticProps() {
-    const res = await fetch(process.env.NEXT_PUBLIC_ENV_HOME);
+    const res = await fetch(process.env.NEXT_PUBLIC_ENV_ECCHI_HOME);
     const data = await res.json();
     if (!data) {
       return {
@@ -20,7 +20,7 @@ export async function getStaticProps() {
     }
 }
 
-export default function Home({sortby}) {
+export default function EcchiHome({sortby}) {
   return (
     <div>
       <Layout title="Home" name="DBAnime"></Layout>
