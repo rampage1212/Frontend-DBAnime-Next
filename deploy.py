@@ -44,3 +44,4 @@ if __name__ == '__main__':
     os.system('clear')
     print("REMEMBER\n you are not required to fill commits for github pages")
     asyncio.run(main())
+    os.system('touch out/.nojekyll')
