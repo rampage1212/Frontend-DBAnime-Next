@@ -25,6 +25,4 @@ To learn more about Next.js, take a look at the following resources:
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-Thanks
-
-Rampage0131
+Created by Rampage0131
